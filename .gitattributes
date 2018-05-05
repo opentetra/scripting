@@ -1,0 +1,3 @@
+# fuer Windows falls man das zip laedt ist die Programmierdatei so komisch
+*.txt  text eol=crlf
+

@@ -1,0 +1,53 @@
+# mit Rautezeichen beginnen Kommentare, werden nicht gesendet
+
+# immer ne gute Idee erstmal zu checken, ob die Verbindung geht
+
+at
+
+# auslesen der vorhandenen Einträge
+# at+cpbr=<startindex>,<endindex>
+
+# lösche vorhandene Einträge
+# at+cpbw=<index>
+
+at+cpbw=1
+at+cpbw=2
+at+cpbw=3
+at+cpbw=4
+at+cpbw=5
+at+cpbw=6
+at+cpbw=7
+at+cpbw=8
+at+cpbw=9
+# usw. wenn mal mehr Einträge da waren...
+
+at+cpbw=98
+ 
+# Symbole:
+# 0 = Einzelruf
+# 1 = gibt einen Fehler
+# 2 = hat kein Symbol
+# 3 = Nebenstelle
+# 4 = Andere
+# 5 = Heim
+# 6 = Handy
+# 7 = Arbeit
+
+# Eintrag schreiben:
+# at+cpbw=<index>,<telnr>,<symbol>,<name>
+# at+cpbw=1,1234567,0,Testeintrag
+
+# WICHTIG: die Namen dürfen nur maximal 12 und keine Sonderzeichen Zeichen enthalten!
+
+at+cpbw=1,1234567,0,Einzelruf
+at+cpbw=2,1234567,3,Nebenstelle
+# Demo wenn Leerzeichen im Namen
+at+cpbw=3,1234567,4,"Andere Leer"
+at+cpbw=4,1234567,5,Heim
+at+cpbw=5,1234567,6,Handy
+at+cpbw=6,1234567,7,Arbeit
+
+# Setze Memo von der Programmierung
+# setze bewusst ungültigen Eintrag 2, den kann keiner anrufen
+# Einträge werden alphabetisch sortiert?
+at+cpbw=98,1,2,"ZVer XX-20XX"
